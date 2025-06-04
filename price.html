@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container1">
+        <h5>this addd 20% and 28$ and multiply by 3.68</h5>
+        <input type="text" id="price" placeholder="أدخل السعر">
+        <p id="result"></p>
+
+        <script>
+
+            let priceInput = document.getElementById("price");
+
+
+            priceInput.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    let price = parseFloat(priceInput.value);
+                    if (!isNaN(price)) {
+                        let res1 = (price * 1.2);
+                        res1 += 28;
+                        res1 *= 3.68
+                        document.getElementById("result").innerText = "النتيجة: " + res1;
+                    } else {
+                        document.getElementById("result").innerText = "الرجاء إدخال رقم صالح.";
+                    }
+                }
+            });
+        </script>
+    </div>
+    <br><br>
+    <div class="container2">
+        <h5>this addd 10% and multiply by 3.68</h5>
+        <input type="text" id="price2" placeholder="أدخل السعر">
+        <p id="result2"></p>
+
+
+        <script>
+
+            let priceInput2 = document.getElementById("price2");
+
+            priceInput2.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    let price = parseFloat(priceInput2.value);
+                    if (!isNaN(price)) {
+                        let res1 = (price * 1.1);
+                        res1 *= 3.68
+                        document.getElementById("result2").innerText = "النتيجة: " + res1;
+                    } else {
+                        document.getElementById("result2").innerText = "الرجاء إدخال رقم صالح.";
+                    }
+                }
+            });
+        </script>
+        <div>
+</body>
+
+</html>
