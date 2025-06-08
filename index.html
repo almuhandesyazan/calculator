@@ -59,6 +59,30 @@
             });
         </script>
         <div>
+    <div class="container2">
+        <h5> divide on 3.68</h5>
+        <input type="text" id="price2" placeholder="aed أدخل السعر">
+        <p id="result2"></p>
+
+
+        <script>
+
+            let priceInput3 = document.getElementById("price2");
+
+            priceInput3.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    let price = parseFloat(priceInput3.value);
+                    if (!isNaN(price)) {
+                        let res1 = (price * 1.1);
+                        res1 /= 3.68
+                        document.getElementById("result2").innerText = "usd النتيجة: " + res1;
+                    } else {
+                        document.getElementById("result2").innerText = "الرجاء إدخال رقم صالح.";
+                    }
+                }
+            });
+        </script>
+        <div>
 </body>
 
 </html>
