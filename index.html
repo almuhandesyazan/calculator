@@ -61,23 +61,23 @@
         <div>
     <div class="container2">
         <h5> divide on 3.68</h5>
-        <input type="text" id="price2" placeholder="aed أدخل السعر">
-        <p id="result2"></p>
+        <input type="text" id="price3" placeholder="aed أدخل السعر">
+        <p id="result3"></p>
 
 
         <script>
 
-            let priceInput3 = document.getElementById("price2");
+            let priceInput3 = document.getElementById("price3");
 
             priceInput3.addEventListener("keydown", function (event) {
                 if (event.key === "Enter") {
                     let price = parseFloat(priceInput3.value);
                     if (!isNaN(price)) {
-                        let res1 = (price * 1.1);
+                        let res1 = price ;
                         res1 /= 3.68
-                        document.getElementById("result2").innerText = "usd النتيجة: " + res1;
+                        document.getElementById("result3").innerText = "usd النتيجة: " + res1;
                     } else {
-                        document.getElementById("result2").innerText = "الرجاء إدخال رقم صالح.";
+                        document.getElementById("result3").innerText = "الرجاء إدخال رقم صالح.";
                     }
                 }
             });
