@@ -13,6 +13,7 @@
         <h5>this addd 20% and 28$ and multiply by 3.68 </h5>
         <input type="text" id="price" placeholder="أدخل السعر">
         <p id="result"></p>
+        <p id="result1"></p>
 
         <script>
 
@@ -25,8 +26,10 @@
                     if (!isNaN(price)) {
                         let res1 = (price * 1.2);
                         res1 += 28;
+                        let res2 = res1
                         res1 *= 3.68
-                        document.getElementById("result").innerText = "النتيجة: " + res1;
+                        document.getElementById("result").innerText = "uae النتيجة : " + res1;
+                        document.getElementById("result1").innerText = " usd النتيجة: " + res2;
                     } else {
                         document.getElementById("result").innerText = "الرجاء إدخال رقم صالح.";
                     }
@@ -50,7 +53,7 @@
                 if (event.key === "Enter") {
                     let priceAED = parseFloat(priceInput2.value);
                     let priceUSD = parseFloat(priceInput2.value);
-                    if (!isNaN(priceInput2)) {
+                    if (!isNaN(priceAED && priceUSD )) {
                         let res1 = (priceAED * 1.1 * 3.68);
                         let res2 = (priceUSD * 1.1);
 
