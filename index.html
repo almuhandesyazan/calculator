@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,35 +9,6 @@
 </head>
 
 <body>
-    <!-- <div class="container1">
-        <h5>this addd 20% and 28$ and multiply by 3.68 </h5>
-        <input type="text" id="price" placeholder="أدخل السعر">
-        <p id="result"></p>
-        <p id="result1"></p>
-
-        <script>
-
-            let priceInput = document.getElementById("price");
-
-
-            priceInput.addEventListener("keydown", function (event) {
-                if (event.key === "Enter") {
-                    let price = parseFloat(priceInput.value);
-                    if (!isNaN(price)) {
-                        let res1 = (price * 1.2);
-                        res1 += 28;
-                        let res2 = res1
-                        res1 *= 3.68
-                        document.getElementById("result").innerText = "uae النتيجة : " + res1;
-                        document.getElementById("result1").innerText = " usd النتيجة: " + res2;
-                    } else {
-                        document.getElementById("result").innerText = "الرجاء إدخال رقم صالح.";
-                    }
-                }
-            });
-        </script>
-    </div> -->
-    <br><br>
     <div class="container2">
         <h5>this addd 10% and multiply by 3.68 (BITBOX and bitedit) for aed and for USD just added 10%</h5>
         <input type="text" id="price2" placeholder="أدخل السعر">
@@ -65,6 +36,120 @@
                 }
             });
         </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>حاسبة الأسعار | المهندس</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-calculator header-icon"></i>
+                <h1 class="header-title">حاسبة الأسعار المتقدمة</h1>
+                <p class="header-subtitle">أداة احترافية لحساب الأسعار بدقة</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Calculator 1 - Commented out as in original -->
+            <!-- <div class="calculator-card">
+                <div class="card-header">
+                    <i class="fas fa-percentage card-icon"></i>
+                    <h3 class="card-title">حاسبة النوع الأول</h3>
+                    <p class="card-description">إضافة 20% + 28$ ثم الضرب في 3.68</p>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="price" class="input-label">أدخل السعر الأساسي</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="price" class="price-input" placeholder="0.00" step="0.01">
+                            <span class="input-currency">$</span>
+                        </div>
+                    </div>
+                    <div class="results-container">
+                        <div class="result-item">
+                            <span class="result-label">النتيجة بالدرهم الإماراتي:</span>
+                            <span id="result" class="result-value">0.00 AED</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">النتيجة بالدولار الأمريكي:</span>
+                            <span id="result1" class="result-value">0.00 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Calculator 2 - BITBOX and bitedit -->
+            <div class="calculator-card active">
+                <div class="card-header">
+                    <i class="fas fa-coins card-icon"></i>
+                    <h3 class="card-title">حاسبة BITBOX و BitEdit</h3>
+                    <p class="card-description">إضافة 10% للدرهم (×3.68) والدولار</p>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="price2" class="input-label">أدخل السعر الأساسي</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="price2" class="price-input" placeholder="0.00" step="0.01">
+                            <span class="input-currency">$</span>
+                        </div>
+                        <button id="calculateBtn" class="calculate-btn">
+                            <i class="fas fa-calculator"></i>
+                            احسب النتيجة
+                        </button>
+                    </div>
+                    <div class="results-container">
+                        <div class="result-item aed-result">
+                            <div class="result-header">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span class="result-label">النتيجة بالدرهم الإماراتي</span>
+                            </div>
+                            <span id="result2" class="result-value">0.00 AED</span>
+                        </div>
+                        <div class="result-item usd-result">
+                            <div class="result-header">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span class="result-label">النتيجة بالدولار الأمريكي</span>
+                            </div>
+                            <span id="result3" class="result-value">0.00 USD</span>
+                        </div>
+                    </div>
+                    <div class="calculation-details">
+                        <h4 class="details-title">تفاصيل العملية الحسابية:</h4>
+                        <div class="details-content">
+                            <div class="detail-item">
+                                <span class="detail-label">للدرهم الإماراتي:</span>
+                                <span class="detail-formula">السعر × 1.1 × 3.68</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">للدولار الأمريكي:</span>
+                                <span class="detail-formula">السعر × 1.1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-text">© 2024 المهندس - جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
