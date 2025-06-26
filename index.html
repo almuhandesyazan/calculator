@@ -15,27 +15,51 @@
         <p id="result2"></p>
         <p id="result3"></p>
 
+    </div>
+    <div class="container1">
+        <h5>this addd 10% and 28$ and multiply by 3.68 (pcmflash) for aed and for USD just added 10% and 28$</h5>
+        <input type="text" id="price3" placeholder="أدخل السعر">
+        <p id="resultUSD"></p>
+        <p id="resultAED"></p>
 
-        <script>
+    </div>
+    <script>
 
-            let priceInput2 = document.getElementById("price2");
+        let priceInput2 = document.getElementById("price2");
+        let priceInput3 = document.getElementById("price3")
 
-            priceInput2.addEventListener("keydown", function (event) {
-                if (event.key === "Enter") {
-                    let priceAED = parseFloat(priceInput2.value);
-                    let priceUSD = parseFloat(priceInput2.value);
-                    if (!isNaN(priceAED && priceUSD )) {
-                        let res1 = (priceAED * 1.1 * 3.68);
-                        let res2 = (priceUSD * 1.1);
+        priceInput3.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                let priceF = parseFloat(priceInput3.value)
+                if (!isNaN(priceF)) {
+                    let priceUSD = (priceF + 28) * 1.1
+                    let priceUED = priceUSD * 3.68
+                    document.getElementById("resultUSD").innerHTML = " USD " + priceUSD
+                    document.getElementById("resultAED").innerHTML = " UED " + priceUED
 
-                        document.getElementById("result2").innerText = " aed النتيجة: " + res1;
-                        document.getElementById("result3").innerText = " usd النتيجة: " + res2;
-                    } else {
-                        document.getElementById("result2").innerText = "الرجاء إدخال رقم صالح.";
-                    }
+                } else {
+                    document.getElementById("resultAED").innerText = "الرجاء إدخال رقم صالح.";
                 }
-            });
-        </script>
+            }
+
+        })
+
+        priceInput2.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                let priceAED = parseFloat(priceInput2.value);
+                let priceUSD = parseFloat(priceInput2.value);
+                if (!isNaN(priceAED && priceUSD)) {
+                    let res1 = (priceAED * 1.1 * 3.68);
+                    let res2 = (priceUSD * 1.1);
+
+                    document.getElementById("result2").innerText = " aed النتيجة: " + res1;
+                    document.getElementById("result3").innerText = " usd النتيجة: " + res2;
+                } else {
+                    document.getElementById("result2").innerText = "الرجاء إدخال رقم صالح.";
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
