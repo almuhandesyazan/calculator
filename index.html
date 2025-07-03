@@ -19,8 +19,9 @@
     <div class="container1">
         <h5>this addd 10% and 28$ and multiply by 3.68 (pcmflash and mmc flash) for aed and for USD just added 10% and 28$</h5>
         <input type="text" id="price3" placeholder="أدخل السعر">
-        <p id="resultUSD"></p>
+        
         <p id="resultAED"></p>
+        <p id="resultUSD"></p>
 
     </div>
     <script>
@@ -49,7 +50,7 @@
                 let priceAED = parseFloat(priceInput2.value);
                 let priceUSD = parseFloat(priceInput2.value);
                 if (!isNaN(priceAED && priceUSD)) {
-                    let res1 = (priceAED * 1.1 * 3.68);
+                    let res1 = (priceAED * 1.1 * 3.65);
                     let res2 = (priceUSD * 1.1);
 
                     document.getElementById("result2").innerText = " aed النتيجة: " + res1;
