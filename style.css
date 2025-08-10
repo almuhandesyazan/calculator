@@ -1,10 +1,10 @@
 input:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  background-color: aqua;
+  background-color: rgb(196, 239, 244);
 }
 
-.container1 , .container2 {
+.container1 , .container2 , .container3 {
  background-color: rgb(181 199 201);
 padding: 20px;
 }

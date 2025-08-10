@@ -16,6 +16,7 @@
         <p id="result3"></p>
 
     </div>
+    <hr>
     <div class="container1">
         <h5>this addd 10% and 28$ and multiply by 3.68 (pcmflash, md flasher , and mmc flash ) for aed and for USD just added 10% and 28$</h5>
         <input type="text" id="price3" placeholder="أدخل السعر">
@@ -24,10 +25,20 @@
         <p id="resultUSD"></p>
 
     </div>
+    <hr>
+    <div class="container3">
+        <h5>this multiply by 3.65 </h5>
+        <input type="text" id="price4" placeholder="أدخل السعر">
+        
+        <p id="resultAED4"></p>
+        
+
+    </div>
     <script>
 
         let priceInput2 = document.getElementById("price2");
         let priceInput3 = document.getElementById("price3")
+        let priceInput4 = document.getElementById("price4")
 
         priceInput3.addEventListener("keydown", function (event) {
             if (event.key === "Enter") {
@@ -57,6 +68,18 @@
                     document.getElementById("result3").innerText = " usd النتيجة: " + res2;
                 } else {
                     document.getElementById("result2").innerText = "الرجاء إدخال رقم صالح.";
+                }
+            }
+        });
+        priceInput4.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                let priceAED = parseFloat(priceInput4.value);
+                if (!isNaN(priceAED)) {
+                    let res1 = (priceAED * 3.65);
+
+                    document.getElementById("resultAED4").innerText = " aed النتيجة: " + res1;
+                } else {
+                    document.getElementById("resultAED4").innerText = "الرجاء إدخال رقم صالح.";
                 }
             }
         });
